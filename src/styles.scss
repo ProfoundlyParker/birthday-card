@@ -1,0 +1,698 @@
+body {
+  display: flex;
+  padding-left: 50px;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-color: #047230;
+}
+
+.birthdayCard {
+  position: relative;
+  width: 250px;
+  height: 350px;
+  transform-style: preserve-3d;
+  transform: perspective(2500px);
+  transition: 1s;
+}
+
+.birthdayCard:hover {
+  transform: perspective(2500px) rotate(5deg);
+  box-shadow: inset 100px 20px 100px rgba(0, 0, 0, 0.2),
+    0 10px 100px rgba(0, 0, 0, 0.5);
+}
+
+.birthdayCard:hover .cardFront {
+  transform: rotateY(-160deg);
+}
+
+.birthdayCard:hover .happy {
+  visibility: hidden;
+}
+
+.cardFront {
+  position: relative;
+  background-color: #cd1d1d;
+  width: 250px;
+  height: 350px;
+  overflow: hidden;
+  transform-origin: left;
+  /* box-shadow: inset 100px 20px 100px rgba(0, 0, 0, 0.2),
+    30px 0 50px rgba(0, 0, 0, 0.4); */
+  transition: 0.6s;
+}
+
+.happy {
+  font-family: Tahoma, sans-serif;
+  text-align: center;
+  margin: 20px;
+  background-image: linear-gradient(140deg, #c5eefd 0%, #77e1fc 50%, #c5eefd 100%);
+  transition: 0.1s;
+  backface-visibility: visible;
+  color: #22a1aa;
+  border-radius: 15px;
+}
+
+.balloons {
+  position: absolute;
+}
+
+.balloonOne,
+.balloonTwo,
+.balloonThree,
+.balloonFour {
+  position: absolute;
+  width: 85px;
+  height: 95px;
+  border-radius: 50%;
+}
+
+.balloonOne {
+  background-color: rgba(251, 139, 249, 0.7);
+  left: -10px;
+  top: 50px;
+}
+
+.balloonTwo {
+  background-color: rgba(12, 42, 176, 0.7);
+  left: 50px;
+  top: 20px;
+}
+
+.balloonThree {
+  background-color: rgba(153, 102, 255, 0.7);
+  left: 110px;
+  top: 50px;
+}
+
+.balloonFour {
+  background-color: rgba(34, 161, 170, 0.7);
+  left: 170px;
+  top: 20px;
+}
+
+.balloonOne:before,
+.balloonTwo:before,
+.balloonThree:before,
+.balloonFour:before {
+  content: "";
+  position: absolute;
+  width: 1px;
+  height: 155px;
+  background-color: #6ea6f4;
+  top: 95px;
+  left: 43px;
+}
+
+.balloonOne:after,
+.balloonTwo:after,
+.balloonThree:after,
+.balloonFour:after {
+  content: "";
+  position: absolute;
+  border-right: 7px solid transparent;
+  border-left: 7px solid transparent;
+  top: 94px;
+  left: 37px;
+}
+
+.balloonOne:after {
+  border-bottom: 10px solid rgb(251, 139, 249);
+}
+
+.balloonTwo:after {
+  border-bottom: 10px solid rgba(12, 42, 176);
+}
+
+.balloonThree:after {
+  border-bottom: 10px solid rgba(153, 102, 255);
+}
+
+.balloonFour:after {
+  border-bottom: 10px solid rgba(34, 161, 170);
+}
+
+.cardInside {
+  position: absolute;
+  background-color: #7ee1fc;
+  width: 250px;
+  height: 350px;
+  z-index: -1;
+  left: 0;
+  top: 0;
+  /* box-shadow: inset 100px 20px 100px rgba(0, 0, 0, 0.2);
+} */
+}
+
+p {
+  font-family: "Arial";
+  margin: 30px;
+  color: #082493;
+  font-size: 17px;
+}
+
+.name {
+  color: #082493;
+  font-size: 16px;
+}
+
+.back {
+  font-family: Tahoma, sans-serif;
+  color: #07237e;
+  text-align: center;
+  margin: 30px;
+  outline-color: #1b4bbb;
+  outline-style: dotted;
+  border-radius: 25px;
+}
+
+.hover {
+  color: rgb(149, 202, 255);
+  padding-top: 45px;
+  text-align: center;
+}
+
+.show-other-card {
+  position: absolute;
+  display: flex;
+  top: 45rem;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background-color: #071e6b;
+  color: white;
+  border-color: #071e6b;
+  border-radius: 30px;
+  font-size: 20px;
+  max-width: 15rem;
+  width: 15rem;
+  min-height: 4.44rem;
+}
+
+.dog-name {
+  color: #082493;
+  font-size: 16px;
+}
+
+.dog-balloons {
+  position: absolute;
+}
+
+.dog-balloonOne,
+.dog-balloonTwo,
+.dog-balloonThree,
+.dog-balloonFour {
+  position: absolute;
+  width: 85px;
+  height: 95px;
+  border-radius: 50%;
+}
+
+.dog-balloonOne {
+  background-color: rgba(71, 239, 144, 0.7);
+  left: -10px;
+  top: 50px;
+}
+
+.dog-balloonTwo {
+  background-color: rgba(235, 245, 95, 0.7);
+  left: 50px;
+  top: 20px;
+}
+
+.dog-balloonThree {
+  background-color: rgba(102, 189, 255, 0.7);
+  left: 110px;
+  top: 50px;
+}
+
+.dog-balloonFour {
+  background-color: rgba(22, 17, 178, 0.7);
+  left: 170px;
+  top: 20px;
+}
+
+.dog-balloonOne:before,
+.dog-balloonTwo:before,
+.dog-balloonThree:before,
+.dog-balloonFour:before {
+  content: "";
+  position: absolute;
+  width: 1px;
+  height: 155px;
+  background-color: #7bb2ff;
+  top: 95px;
+  left: 43px;
+}
+
+.dog-balloonOne:after,
+.dog-balloonTwo:after,
+.dog-balloonThree:after,
+.dog-balloonFour:after {
+  content: "";
+  position: absolute;
+  border-right: 7px solid transparent;
+  border-left: 7px solid transparent;
+  top: 94px;
+  left: 37px;
+}
+
+.dog-balloonOne:after {
+  border-bottom: 10px solid rgb(54, 217, 125);
+}
+
+.dog-balloonTwo:after {
+  border-bottom: 10px solid rgb(237, 248, 89);
+}
+
+.dog-balloonThree:after {
+  border-bottom: 10px solid rgb(76, 175, 251);
+}
+
+.dog-balloonFour:after {
+  border-bottom: 10px solid rgb(22, 17, 178);
+}
+
+@mixin transform($info) {
+  transform: $info;
+  -webkit-transform: $info;
+  -moz-transform: $info;
+  -ms-transform: $info;
+}
+@mixin gradient($type, $info) {
+  background: #{$type}-gradient($info);
+  background: -webkit-#{$type}-gradient($info);
+  background: -moz-#{$type}-gradient($info);
+  background: -ms-#{$type}-gradient($info);
+}
+@mixin browsers($info) {
+  animation: $info;
+  -webkit-animation: $info;
+  -moz-animation: $info;
+  -ms-animation: $info;
+  -o-animation: $info;
+}
+@mixin blur($info) {
+  filter: blur($info);
+  -webkit-filter: blur($info);
+  -moz-filter: blur($info);
+  -ms-filter: blur($info);
+  -o-filter: blur($info);
+}
+@mixin animation($name) {
+  @keyframes #{$name} {
+    @content;
+  }
+  @-webkit-keyframes #{$name} {
+    @content;
+  }
+  @-moz-keyframes #{$name} {
+    @content;
+  }
+  @-ms-keyframes #{$name} {
+    @content;
+  }
+}
+
+$bg: #6E3F3F;
+$green: #416B25;
+$brown: #4D4139;
+$black: #222;
+$yellow: #f5dd2b;
+
+$bulb-red: #A63838;
+$bulb-blue: #387CA6;
+$bulb-yellow: #A69D38;
+$bulb-green: #DE7812;
+
+$white: #FFF7F0;
+$orange: #B07E4C;
+
+.content-wrapper {
+  height: 270px;
+  width: 200px;
+}
+
+.tree {
+  position: absolute;
+  text-align: center;
+  width: 245px;
+  &:before {
+    background-color: $brown;
+    content: '';
+    height: 25px;
+    left: 0;
+    margin: auto;
+    position: absolute;
+    right: 0;
+    top: 230px;
+    width: 30px;
+  }
+}
+
+.tree-piece {
+  left: 0;
+  margin: auto;
+  position: absolute;
+  right: 0;
+}
+
+.t1 {
+  border-bottom: 80px solid $green;
+  border-left: 50px solid transparent;
+  border-right: 50px solid transparent;
+  top: 0;
+  width: 0;
+  z-index: 5;
+  &:after {
+    border-bottom: 80px solid darken($green, 3);
+    border-right: 50px solid transparent;
+    content: '';
+    position: absolute;
+  }
+}
+
+.t2 {
+  border-bottom: 100px solid $green;
+  border-left: 70px solid transparent;
+  border-right: 70px solid transparent;
+  top: 30px;
+  width: 10px;
+  z-index: 4;
+  &:after {
+    border-bottom: 100px solid darken($green, 3);
+    border-right: 70px solid transparent;
+    content: '';
+    position: absolute;
+    width: 10px;
+  }
+}
+
+.t3 {
+  border-bottom: 120px solid $green;
+  border-left: 90px solid transparent;
+  border-right: 90px solid transparent;
+  top: 60px;
+  width: 10px;
+  z-index: 3;
+  &:after {
+    border-bottom: 120px solid darken($green, 3);
+    border-right: 90px solid transparent;
+    content: '';
+    position: absolute;
+    width: 10px;
+  }
+}
+
+.t4 {
+  border-bottom: 140px solid $green;
+  border-left: 110px solid transparent;
+  border-right: 110px solid transparent;
+  top: 90px;
+  width: 10px;
+  z-index: 2;
+  &:after {
+    border-bottom: 140px solid darken($green, 3);
+    border-right: 110px solid transparent;
+    content: '';
+    position: absolute;
+    width: 10px;
+  }
+}
+
+.t5 {
+  border-bottom: 160px solid $green;
+  border-left: 130px solid transparent;
+  border-right: 130px solid transparent;
+  top: 110px;
+  width: 10px;
+  z-index: 1;
+  &:after {
+    border-bottom: 160px solid darken($green, 3);
+    border-right: 130px solid transparent;
+    content: '';
+    position: absolute;
+    width: 10px;
+  }
+}
+
+.lights {
+  border-bottom: 1px solid $black;
+  border-radius: 100%;
+  position: absolute;
+  z-index: 6;
+}
+
+.l1 {
+  height: 20px;
+  left: -21px;
+  top: 40px;
+  width: 60px;
+  @include transform(skew(40deg) rotate(30deg));
+}
+
+.l2 {
+  height: 20px;
+  left: -55px;
+  top: 60px;
+  width: 100px;
+  @include transform(skew(-40deg) rotate(-20deg));
+}
+
+.l3 {
+  height: 20px;
+  left: -47px;
+  top: 80px;
+  width: 135px;
+  @include transform(skew(40deg) rotate(15deg));
+}
+
+.l4 {
+  height: 20px;
+  left: -88px;
+  top: 99px;
+  width: 170px;
+  @include transform(skew(-40deg) rotate(-9deg));
+}
+
+.star {
+  border-bottom: 7px solid $yellow;
+  border-left: 4px solid transparent;
+  border-right: 4px solid transparent;
+  left: 0;
+  margin: auto;
+  position: absolute;
+  right: 0;
+  top: -0.75rem;
+  width: 0;
+  transform: scale(1.75);
+  z-index: 6;
+  &:after {
+    border-bottom: 10px solid $yellow;
+    border-left: 11px solid transparent;
+    border-right: 12px solid transparent;
+    content: '';
+    left: -11px;
+    margin: auto;
+    position: absolute;
+    top: 5px;
+    @include transform(rotate(30deg));
+  }
+  &:before {
+    border-left: 11px solid transparent;
+    border-right: 11px solid transparent;
+    border-bottom: 10px solid $yellow;
+    content: '';
+    left: -11px;
+    margin: auto;
+    position: absolute;
+    top: 5px;
+    @include transform(rotate(-30deg));
+  }
+}
+
+.bulb {
+  border-radius: 100% 100% 0 0;
+  height: 10px;
+  position: absolute;
+  width: 5px;
+  z-index: 6;
+}
+
+.blue-bulb {
+ @include browsers(lightItUp 2s linear infinite);
+}
+
+.yellow-bulb {
+  @include browsers(lightItUp 2s -1.5s linear infinite);
+}
+
+.red-bulb {
+  background-color: $bulb-red; 
+  @include browsers(lightItUp 2s -0.5s linear infinite);
+}
+
+.green-bulb {
+  @include browsers(lightItUp 2s -1s linear infinite);
+}
+
+.b1 {
+  left: -14px;
+  top: 38px;
+  @include transform(rotate(30deg));
+}
+
+.b2 {
+  left: 1px;
+  top: 56px;
+  @include transform(rotate(200deg));
+}
+
+.b3 {
+  left: 25px;
+  top: 54px;
+  @include transform(rotate(23deg));
+}
+
+.b4 {
+  left: -50px;
+  top: 78px;
+  @include transform(rotate(-10deg));
+}
+
+.b5 {
+  left: -27px;
+  top: 84px;
+  @include transform(rotate(-196deg));
+}
+
+.b6 {
+  left: -8px;
+  top: 68px;
+  @include transform(rotate(-16deg));
+}
+
+.b7 {
+  left: 18px;
+  top: 71px;
+  @include transform(rotate(-200deg));
+}
+
+.b8 {
+  left: 37px;
+  top: 53px;
+  @include transform(rotate(-20deg));
+}
+
+.b9 {
+  left: -47px;
+  top: 70px;
+  @include transform(rotate(20deg));
+}
+
+.b10 {
+  left: -30px;
+  top: 87px;
+  @include transform(rotate(200deg));
+}
+
+.b11 {
+  left: -2px;
+  top: 83px;
+  @include transform(rotate(20deg));
+}
+
+.b12 {
+  left: 20px;
+  top: 100px;
+  @include transform(rotate(195deg));
+}
+
+.b13 {
+  left: 50px;
+  top: 95px;
+  @include transform(rotate(10deg));
+}
+
+.b14 {
+  left: 75px;
+  top: 110px;
+  @include transform(rotate(185deg));
+}
+
+.b15 {
+  left: -85px;
+  top: 116px;
+  @include transform(rotate(-10deg));
+}
+
+.b16 {
+  left: -60px;
+  top: 125px;
+  @include transform(rotate(170deg));
+}
+
+.b17 {
+  left: -35px;
+  top: 112px;
+  @include transform(rotate(-10deg));
+}
+
+.b18 {
+  left: -7px;
+  top: 118px;
+  @include transform(rotate(180deg));
+}
+
+.b19 {
+  left: 20px;
+  top: 104px;
+  @include transform(rotate(-13deg));
+}
+
+.b20 {
+  left: 47px;
+  top: 109px;
+  @include transform(rotate(-193deg));
+}
+
+.b21 {
+  left: 68px;
+  top: 94px;
+  @include transform(rotate(-14deg));
+}
+
+@include animation(lightItUp) {
+  0% {
+    background-color: $bulb-blue;
+    box-shadow: 0px 0px 5px $bulb-blue;
+  }
+ 24% {
+    background-color: $bulb-blue;
+    box-shadow: 0px 0px 5px $bulb-blue;
+  }
+  25% {
+    background-color: $bulb-red;
+    box-shadow: 0px 0px 5px $bulb-red;
+  }
+  49% {
+    background-color: $bulb-red;
+    box-shadow: 0px 0px 5px $bulb-red;
+  }
+  50% {
+    background-color: $bulb-green;
+    box-shadow: 0px 0px 5px $bulb-green;
+  }
+  74% {
+    background-color: $bulb-green;
+    box-shadow: 0px 0px 5px $bulb-green;
+  }
+  75% {
+    background-color: $bulb-yellow;
+    box-shadow: 0px 0px 5px $bulb-yellow;
+  }
+  100% {
+    background-color: $bulb-yellow;
+    box-shadow: 0px 0px 5px $bulb-yellow;
+  }
+}

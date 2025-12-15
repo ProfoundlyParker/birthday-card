@@ -1,5 +1,5 @@
 import Card from "./Card";
-import "./styles.css";
+import "./styles.scss";
 
 export default function App() {
   return (

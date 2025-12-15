@@ -1,4 +1,4 @@
-import "./styles.css";
+import "./styles.scss";
 import React, { useState } from "react";
 import useWindowSize from 'react-use/lib/useWindowSize';
 import Confetti from 'react-confetti';
@@ -27,17 +27,49 @@ const Card = () => {
       <div className="card">
         <div className="birthdayCard">
       <div className="cardFront">
-        <h3 className="happy">Happy Birthday Everest! 🎉</h3>
-        <div className="balloons">
-          <div className="balloonOne" />
-          <div className="balloonTwo" />
-          <div className="balloonThree" />
-          <div className="balloonFour" />
+        <h3 className="happy">Merry Christmas, Everest! 🎄</h3>
+      <div className="content-wrapper">
+      <div class="tree">
+        <div class="star"></div>
+        <div class="tree-piece t1">
+          <div class="bulb b1 blue-bulb"></div>
+          <div class="bulb b2 red-bulb"></div>
+          <div class="bulb b3 green-bulb"></div>
+          <div class="lights l1"></div>
         </div>
+        <div class="tree-piece t2">
+          <div class="bulb b4 red-bulb"></div>
+          <div class="bulb b5 green-bulb"></div>
+          <div class="bulb b6 yellow-bulb"></div>
+          <div class="bulb b7 blue-bulb"></div>
+          <div class="bulb b8 red-bulb"></div>
+          <div class="lights l2"></div>
+        </div>
+        <div class="tree-piece t3">
+          <div class="bulb b9 yellow-bulb"></div>
+          <div class="bulb b10 blue-bulb"></div>
+          <div class="bulb b11 red-bulb"></div>
+          <div class="bulb b12 green-bulb"></div>
+          <div class="bulb b13 yellow-bulb"></div>
+          <div class="bulb b14 blue-bulb"></div>
+          <div class="lights l3"></div>
+        </div>
+        <div class="tree-piece t4">
+          <div class="bulb b15 blue-bulb"></div>
+          <div class="bulb b16 red-bulb"></div>
+          <div class="bulb b17 green-bulb"></div>
+          <div class="bulb b18 yellow-bulb"></div>
+          <div class="bulb b19 blue-bulb"></div>
+          <div class="bulb b20 red-bulb"></div>
+          <div class="bulb b21 green-bulb"></div>
+          <div class="lights l4"></div>
+        </div>
+    </div>
+      </div>
       </div>
       <div onMouseEnter={() => playSound()} onMouseLeave={() => stop()}>
       <div className="cardInside">
-        <h3 className="back">Happy Birthday Everest! 🎉</h3>
+        <h3 className="back">Merry Christmas Everest! 🎄</h3>
         <p>
           Dear Ev,
           <br></br><br></br>Happy happy birthday!! I hope your day is filled with lots of love and
