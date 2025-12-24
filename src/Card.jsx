@@ -18,7 +18,7 @@ const Card = () => {
   const [playSound, { stop }] = useSound(birthdaySong);
     return (
     <div>
-    <Confetti width={width} height={height} numberOfPieces={100} />
+    <Confetti width={width} height={height} numberOfPieces={100} colors={['#e52222', '#981a1a', '#184e07', '#0c8228', '#fffefe']} />
     {showDogCard ? (
       <div id="component">
         <DogCard />
@@ -64,7 +64,7 @@ const Card = () => {
           <div class="bulb b21 green-bulb"></div>
           <div class="lights l4"></div>
         </div>
-    </div>
+      </div>
       </div>
       </div>
       <div onMouseEnter={() => playSound()} onMouseLeave={() => stop()}>
