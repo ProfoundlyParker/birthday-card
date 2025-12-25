@@ -3,12 +3,12 @@ import React, { useState } from "react";
 import useWindowSize from 'react-use/lib/useWindowSize';
 import Confetti from 'react-confetti';
 import useSound from 'use-sound';
-import birthdaySong from './birthday-song.mp3'
+import christmasSong from './dog-christmas-song.MP3'
 
 const DogCard = () => {
   const { width, height } = useWindowSize();
-  const [playbackRate, ] = useState(1.75);
-  const [playSound, { stop }] = useSound(birthdaySong, { playbackRate });
+  const [playbackRate, ] = useState(1.25);
+  const [playSound, { stop }] = useSound(christmasSong, { playbackRate });
     return (
     <div>
     <Confetti width={width} height={height} numberOfPieces={100} colors={['#e52222', '#981a1a', '#184e07', '#0c8228', '#fffefe']} />
@@ -57,17 +57,17 @@ const DogCard = () => {
       </div>
       <div onMouseEnter={() => playSound()} onMouseLeave={() => stop()}>
       <div className="cardInside">
-        <h3 className="back">Merry Christmas Daddy! 🎉</h3>
+        <h3 className="back">Happy Howlidays Daddy! ❄️</h3>
         <p>
           Dear Daddy,
-          <br></br><br></br>Happy Merry Christmas!! Thanks for always taking us on a walk and giving us treatos! Hope you have a doggone amazing day! 🎂
+          <br></br><br></br>Merry Christmas! You're all we want for Christmas, with lots of kisses and scritches from you! And of course, 28,345 treats every day 😍 Hope you have a doggone amazing holiday! 🎁
         </p>
         <p className="dog-name">Love, Winter & Charlie 🐶</p>
       </div>
       </div>
     </div>
     </div>
-    <div className="hover">Hover inside card for surprise</div>
+    <div className="hover">Hover inside card for a surprise</div>
     </div>
 )};
 

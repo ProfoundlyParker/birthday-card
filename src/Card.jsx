@@ -3,7 +3,7 @@ import React, { useState } from "react";
 import useWindowSize from 'react-use/lib/useWindowSize';
 import Confetti from 'react-confetti';
 import useSound from 'use-sound';
-import birthdaySong from './birthday-song.mp3'
+import christmasSong from './christmas-song.mp3'
 import DogCard from './DogCard';
 
 const Card = () => {
@@ -15,7 +15,7 @@ const Card = () => {
   }
   const { width, height } = useWindowSize();
   const [showDogCard, setShowDogCard] = useState(false);
-  const [playSound, { stop }] = useSound(birthdaySong);
+  const [playSound, { stop }] = useSound(christmasSong);
     return (
     <div>
     <Confetti width={width} height={height} numberOfPieces={100} colors={['#e52222', '#981a1a', '#184e07', '#0c8228', '#fffefe']} />
@@ -72,12 +72,12 @@ const Card = () => {
         <h3 className="back">Merry Christmas Everest! 🎄</h3>
         <p>
           Dear Ev,
-          <br></br><br></br>Happy happy birthday!! I hope your day is filled with lots of love and
-          joy and that your birthday wishes come true! 🎂
+          <br></br><br></br>Merry Christmas!! I hope your day is filled with lots of love and
+          joy and that your holigay wishes come true! Get yourself a nice cup of hot cocoa and enjoy the day to the fullest! ☕🎁
         </p>
-        <p className="name">With all my love, Parker💖</p>
+        <p className="name">With all my love, Parker 💖</p>
       </div>
-      <div className="hover">Hover inside card for surprise</div>
+      <div className="hover">Hover inside card for a surprise</div>
       </div>
     </div>
       </div>
